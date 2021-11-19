@@ -1,4 +1,4 @@
-<p align="center"><img alt="DevUI Logo" src="assets/logo.png" width="180" style="max-width:100%;">
+<p align="center"><img alt="DevUI Logo" src="/packages/my-cli/assets/logo.png" width="180" style="max-width:100%;">
 </p>
 
 <h1 align="center">
