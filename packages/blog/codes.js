@@ -9,7 +9,7 @@ var nextPermutation = function(nums) {
             var left = str[m];
             //除当前元素的其他元素组合
             var rest = str.slice(0, m) + str.slice(m + 1, str.length);
-            //上一次递归返回的全排列
+            //上一次递归返回的全xw排列
             var preResult = this.fullpermutate(rest);
             //组合在一起
             for (var i = 0; i < preResult.length; i++) {
