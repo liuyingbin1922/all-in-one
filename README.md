@@ -38,7 +38,14 @@ my cli is the start point of my web frontend experience.welcome to read my exper
 
 ## 前端开源系列
 [参与devui组件库gantt组件开发](https://gitee.com/devui/vue-devui)
+
 [transform-vue-js]()
 
 
 ## 手写js系列
+
+- 手写函数curry
+- 手写call / apply / bind
+- 手写new
+- 手写深拷贝 
+- 手写模拟gc 【node内存分配】
