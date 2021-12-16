@@ -32,3 +32,42 @@ var insertIntoBST = function(root, val) {
 };
 
 
+/**
+ * @description 删除二叉搜索树某个节点 
+ * leetcode 450
+ * 这里的关键点是在于删除指定的节点的时候，如果该节点左右子树都存在的话，那么就需要将删除的节点的子树作为右节点的左子树添加到子树上。
+ */
+/**
+ * @param {TreeNode} root
+ * @param {number} key
+ * @return {TreeNode}
+ */
+ var deleteNode = function(root, key) {
+    if(root === null) {
+        return root 
+    }
+    if(root.val === key) {
+        if(!root.left){
+            return root.right
+        }else if(!root.right) {
+            return root.left
+        }else {
+            let cur = root.right
+            while(cur.left) {
+                cur = cur.left
+            }
+            cur.left = root.left
+            root = root.right
+            delete root
+            return root
+        }
+    }
+    if(root.val > key){
+        root.left = deleteNode(root.left , key)
+    }
+    if(root.val < key) {
+        root.right = deleteNode(root.right , key)
+    }
+    return root
+};
+
