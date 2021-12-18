@@ -71,3 +71,35 @@ var insertIntoBST = function(root, val) {
     return root
 };
 
+
+
+/**
+ * @description 判断是否是二叉搜索树
+ */
+
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+ var isValidBST = function(root) {
+    const queue = []
+    const dfs = (root) => {
+        if(root === null){
+            return
+        }
+        dfs(root.left)
+        queue.push(root.val)
+        dfs(root.right)
+    }
+    dfs(root)
+    // 判断是否是单调序列
+    for (let i = 0;i < queue.length;i++){
+        for (let j = i + 1;j < queue.length;j++){
+            if(queue[j] <= queue[i]){
+                return false
+            }
+        }
+    }
+    return true
+};
+
