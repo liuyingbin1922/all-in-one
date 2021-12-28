@@ -33,9 +33,13 @@
 
     二分查找：核心是定义left , right , mid 三个变量，利用left / right 值的变化来查找target。
 
+    三数之和： 利用while循环判断是否三数之和为0即可。
+
 - 试题：
 
     [LC704](https://leetcode-cn.com/problems/binary-search/) , 直接使用二分查找解答即可，属于基础题。
+
+    [LC15：三数之和](https://leetcode-cn.com/problems/3sum/) , 二数之和的进阶版本。
 
 
 
