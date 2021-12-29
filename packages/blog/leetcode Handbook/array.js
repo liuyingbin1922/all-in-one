@@ -51,3 +51,37 @@
 
     return res
 };
+
+
+
+/**
+ * @description 16. 最接近的三数之和
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+ var threeSumClosest = function(nums, target) {
+
+    let len = nums.length
+    nums.sort((a , b) => a - b)
+    let res = nums[0] + nums[1] + nums[nums.length - 1]
+    for (let i = 0;i < nums.length;i++) {
+        let left = i + 1
+        let right = len - 1
+        const n1 = nums[i]
+        while(left < right) {
+            const n2 = nums[left] 
+            const n3 = nums[right]
+            const sum = n1 + n2 + n3
+            if(sum > target) {
+                right--
+            }else {
+                left++
+            }
+            if(Math.abs(sum - target) < Math.abs(res - target)) {
+                res = sum
+            }
+        }
+    }
+    return res
+};
