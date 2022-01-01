@@ -85,3 +85,51 @@
     }
     return res
 };
+
+/**
+ * @description 单词搜索
+ * @param {character[][]} board
+ * @param {string} word
+ * @return {boolean}
+ */
+
+ var exist = function(board, word) {
+    const w = board.length
+    const h = board[0].length
+    const used = new Array(w)
+    for (let i = 0;i < w;i++) {
+        used[i] = new Array(h)
+    }
+
+    const find = (row , col , i) => {
+        if(i === word.length) {
+            return true
+        }
+        if(row < 0 || row >= w || col < 0 || col >= h) {
+            return false
+        }
+        if(used[row][col] || board[row][col] !== word[i]) {
+            return false
+        }
+
+        used[row][col] = true
+
+        const findResult = find(row + 1 , col , i+1) || find(row - 1 , col , i+1) || find(row , col + 1 , i+1) || find(row , col - 1 , i+1)
+
+        if(findResult) {
+            return true
+        }
+        used[row][col] = false
+        return false
+    }
+
+    for (let i = 0;i < w;i++) {
+        for(let j = 0;j < h;j++) {
+            if(board[i][j] === word[0] && find(i , j , 0)){
+                return true
+            }
+        }
+    }
+
+    return false
+};

@@ -43,6 +43,8 @@
 
     [LC16:最接近的三数之和](https://leetcode-cn.com/problems/3sum-closest/) , 微调三数之和
 
+    [LC79:单词搜索](https://leetcode-cn.com/problems/word-search/) , 设置单词的状态，遍历单词进行对应的状态变更。
+
 
 ### 参考内容
 
