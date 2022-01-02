@@ -133,3 +133,40 @@
 
     return false
 };
+
+/**
+ * @description LC 从四周向内部推进
+ * @param {number[][]} matrix
+ * @return {number[]}
+ */
+ var spiralOrder = function(matrix) {
+    // 四周收缩的方式
+    if(matrix === []) return []
+    let left = 0
+    let right = matrix[0].length - 1
+    let top = 0
+    let bottom = matrix.length - 1
+    const res = []
+    while(left < right && top < bottom){
+        for (let i = left ;i < right;i++) res.push(matrix[top][i]) // 右边
+        for (let i = top;i < bottom;i++ ) res.push(matrix[i][right]) // 
+        for (let i = right; i > left; i--) res.push(matrix[bottom][i])// 下层
+        for (let i = bottom;i > top;i--) res.push(matrix[i][left])
+        left++
+        top++
+        bottom--
+        right--
+    }
+
+    if(top == bottom) {
+        for (let i = left;i <= right;i++) {
+            res.push(matrix[top][i])
+        }
+    }else if(left == right){
+        for (let i = top;i <= bottom;i++) {
+            res.push(matrix[i][left])
+        }
+    }
+    return res
+    
+};
