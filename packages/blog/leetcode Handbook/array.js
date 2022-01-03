@@ -170,3 +170,26 @@
     return res
     
 };
+
+/**
+ * @description 二维数组去重
+ * 
+ */
+
+ var tidy = function(arr) {
+    var i = 0,
+        j = arr.length,
+        cache = {},
+        key, result = [];
+    for (; i < j; i++) {
+        key = arr[i][0];
+        key = typeof(key) + key;
+        if (!cache[key]) {
+            cache[key] = 1;
+            result.push(arr[i]);
+        }
+    }
+    return result;
+};
+
+console.log(tidy([[2,2,2] , [2,2,2]]))
