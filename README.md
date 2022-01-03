@@ -52,6 +52,7 @@ my cli is the start point of my web frontend experience.welcome to read my exper
 - 手写深拷贝 
 - 手写模拟gc 【node内存分配】
 
+[JS 手写系列参考](./packages/blog/js手写系列/readme.md)
 
 ## leetcode handbook
 

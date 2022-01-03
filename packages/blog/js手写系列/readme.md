@@ -7,10 +7,16 @@
 
 ### 内容
 
-    > eventEmitter 
-    > promise
-    > new 
-    > gc【垃圾回收】
-    > bind / call / apply 
-    > curry  
+> [eventEmitter](./eventEmitter.js) 
+
+> [promise](./promise.js)
+
+> [new](./new.js) 
+
+> [gc【垃圾回收】](./gc.js)
+
+> [bind / call / apply](./bind.js) 
+
+> [curry](./curry.js)  
+
 
