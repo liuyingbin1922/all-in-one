@@ -44,6 +44,8 @@
 
     [LC54:螺旋矩阵](https://leetcode-cn.com/problems/spiral-matrix/) , 从四周向内部跟进
 
+    [LC86:分隔链表](https://leetcode-cn.com/problems/partition-list/) , 直接设置两个链表，最后在拼接一起
+
     [数组求和专题](./sum.md)
 
 ### 参考内容
